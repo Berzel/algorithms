@@ -35,7 +35,7 @@ int *merge(int *left, int left_size, int *right, int right_size){
       continue;
     }
 
-    if (right_index != right_size){
+    if (right_index < right_size){
       result[i] = right[right_index];
       ++right_index;
       continue;

@@ -6,6 +6,7 @@
  * @param int *arr  The array that is being searched
  * @param int size  The size of the array that is being searched
  * @param int val The value we are searching for
+ * @return int  The index position of the element if it is found otherwise -1 if not found
  **/
 int search(int *arr, int size, int val){
   for (int i = 0; i < size; ++i){
