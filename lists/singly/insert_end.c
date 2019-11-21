@@ -49,6 +49,20 @@ Node *insert(Node *root, int val){
   return root;
 }
 
+/**
+ * Print all the items in a list
+ * 
+ * @param Node *list  The pointer to the root of the list
+ **/
+void printList(Node *list){
+  Node *ptr = list->next;
+
+  while (ptr != (Node *) 0){
+    printf("%d ", ptr->val);
+    ptr = ptr->next;
+  }
+}
+
 
 /**
  * Run some tests, by creating a new list and then adding items to the list and then printing the list to verify the 
@@ -63,12 +77,7 @@ int main(){
     list = insert(list, i);
   }
 
-  Node *ptr = list->next;
-
-  while (ptr != (Node *) 0){
-    printf("%d\n", ptr->val);
-    ptr = ptr->next;
-  }
-
+  printList(list);
+  printf("\n");
   return 0;
 }
